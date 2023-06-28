@@ -41,7 +41,6 @@ function App() {
             <>
               <div>
                 <WeatherData data={data} />
-                <Text fz="lg">Location{<Text fw={700}>{data.name}</Text>}</Text>
               </div>
               <MapboxWidget data={data} />
             </>
