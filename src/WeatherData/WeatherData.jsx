@@ -3,7 +3,14 @@ import { string } from 'prop-types';
 const WeatherData = ({ data }) => {
   return (
     <>
-      <Grid gutter={5} gutterXs="md" gutterMd="xl" gutterXl={50}>
+      <Grid>
+        <Text fz="lg">Location{<Text fw={700}>{data.name}</Text>}</Text>
+        <Grid.Col span={9}>{data.name}</Grid.Col>
+        <Grid.Col span={4}>2</Grid.Col>
+        <Grid.Col span={4}>3</Grid.Col>
+        <Grid.Col span={4}>4</Grid.Col>
+      </Grid>
+      {/* <Grid gutter={5} gutterXs="md" gutterMd="xl" gutterXl={50}>
         <Grid.Col span={6}>
           Temperature: {Math.round(data.main.temp)}ºC
         </Grid.Col>
@@ -22,7 +29,7 @@ const WeatherData = ({ data }) => {
           </Grid>
         </Grid.Col>
         <Grid.Col span={6}>Current Humidity: {data.main.humidity}%</Grid.Col>
-      </Grid>
+      </Grid> */}
     </>
   );
 };
