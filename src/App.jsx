@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import './App.css';
-import 'leaflet/dist/leaflet.css';
+
 import LocationForm from './UI/Form/LocationForm';
-import 'leaflet/dist/leaflet.css';
+
 import { MantineProvider, Text } from '@mantine/core';
 
 import { ErrorBoundary } from 'react-error-boundary';

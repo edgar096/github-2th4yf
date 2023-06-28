@@ -1,10 +1,27 @@
 import { Alert } from '@mantine/core';
-//import { IconAlertCircle } from '@tabler-icons-react';
+import { IconAlertCircle } from '@tabler/icons-react';
+import { useState } from 'react';
 const FallbackComponent = () => {
+  const [close, setClose] = useState(true);
+  const handleCloseButton = () => {
+    setClose(false);
+  };
   return (
-    <Alert title="Error" color="red" withCloseButton>
-      Invalid Location
-    </Alert>
+    <>
+      {close ? (
+        <Alert
+          icon={<IconAlertCircle size="1rem" />}
+          title="Invalid Location!"
+          color="red"
+          withCloseButton
+          onClose={handleCloseButton}
+        >
+          Enter a valid Location
+        </Alert>
+      ) : (
+        <></>
+      )}
+    </>
   );
 };
 
